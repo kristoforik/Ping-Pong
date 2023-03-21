@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background: #052045;
+  overflow: hidden;
+  font-family: "Cinzel", serif;
+}
+
+.small-device {
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  text-align: center;
+  line-height: 140%;
+  font-size: 16px;
+}
+
+.canvas-container {
+  margin-top: 8rem;
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-container p {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.canvas-container p:first-child {
+  margin-right: 60px;
+}
+
+.canvas-container p:last-child {
+  margin-left: 60px;
+}
+
+.canvas-container .wrapper {
+  border: 3px solid white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px white;
+}
+#score-message {
+  color: red;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  width: vh;
+  text-shadow: 10px 10px 15px red;
+  transition: 0.5s;
+}

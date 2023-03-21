@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winner</title>
+    <script>
+      function newLocation() {
+        sessionStorage.setItem("winner", "None");
+        window.location.href = "game.html";
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(34, 37, 36);
+        color: rgb(156, 248, 138);
+        font-family: "Cinzel", serif;
+      }
+
+      .winner {
+        font-size: 32px;
+        margin-bottom: 100px;
+      }
+
+      button {
+        font-family: "Cinzel", serif;
+        padding: 10px 15px;
+        font-size: 24px;
+        background: rgb(29, 32, 31);
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+        transition: 0.7s;
+      }
+      button:hover {
+        background: rgb(25, 27, 26);
+        color: rgb(86, 86, 221);
+        border: 2px solid rgb(48, 48, 210);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="winner"></p>
+    <button onclick="newLocation()">Play Again</button>
+    <script>
+      let winner = sessionStorage.getItem("winner");
+      let message = document.getElementsByClassName("winner");
+      message[0].textContent = winner + " Wins";
+      if (message[0].textContent == "AI Wins") {
+        message[0].style.color = "red";
+      } else if (message[0].textContent == "Player Wins") {
+        message[0].style.color = "green";
+      }
+    </script>
+  </body>
+</html>
